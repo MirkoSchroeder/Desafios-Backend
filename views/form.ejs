@@ -1,0 +1,27 @@
+<html lang='en'>
+    
+<%- include('head'); -%>
+
+<body>
+    <div class='container-lg'>
+        <form action="/productos" method="POST">
+            <div class="my-3">
+                <label for="nombre" class="form-label">Nombre Del Producto</label>
+                <input id="nombre" class="form-control" type="text" name="title" required>
+            </div>
+            <div class="my-3">
+                <label for="precio" class="form-label">Precio Del Producto</label>
+                <input id="precio" class="form-control" type="number" name="price" required>
+            </div>
+            <div class="my-3">
+                <label for="imgUrl" class="form-label">Imagen Del Producto</label>
+                <input id="imgUrl" class="form-control" type="url" name="thumbnail" required>
+            </div>
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+        <button class="btn btn-light"><a href="/productos">Ir a Productos</a></button>
+        </form>
+    </div>
+</body>
+
+</html>

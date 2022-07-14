@@ -1,0 +1,29 @@
+{{#if productos.length}}
+	<table class='table mt-3'>
+		<thead>
+			<tr>
+				<th class='align-middle' scope='col'>#</th>
+				<th class='align-middle' scope='col'>Nombre</th>
+				<th class='align-middle' scope='col'>Precio</th>
+				<th class='align-middle' scope='col'>Imagen</th>
+			</tr>
+		</thead>
+		{{#each productos}}
+			<thead>
+				<tr>
+					<td class='align-middle' scope='row'>{{id}}</td>
+					<td class='align-middle'>{{title}}</td>
+					<td class='align-middle'>{{price}}$</td>
+					<td class='align-middle'><img
+							src='{{thumbnail}}'
+							alt='imagen del producto'
+							style='width: 100px'
+						/></td>
+				</tr>
+			</thead>
+		{{/each}}
+	</table>
+{{else}}
+	<h1>No se encontraron productos.</h1>
+{{/if}}
+<button class='btn btn-light'><a href='/'>Ir al Formulario</a></button>

@@ -1,0 +1,38 @@
+<html lang="en">
+	<%- include('head'); -%>
+	<body>
+		<div class="container-lg">
+			<% if (productos.length) { %>
+			<table class="table mt-3">
+				<thead>
+					<tr>
+						<th class="align-middle" scope="col">#</th>
+						<th class="align-middle" scope="col">Nombre</th>
+						<th class="align-middle" scope="col">Precio</th>
+						<th class="align-middle" scope="col">Imagen</th>
+					</tr>
+				</thead>
+				<% productos.forEach((product) => { %>
+				<thead>
+					<tr>
+						<td class="align-middle" scope="row"><%=product.id%></td>
+						<td class="align-middle"><%=product.title%></td>
+						<td class="align-middle"><%=product.price%>$</td>
+						<td class="align-middle">
+							<img
+								src=<%=product.thumbnail%>
+								alt="imagen del producto"
+								style="width: 100px"
+							/>
+						</td>
+					</tr>
+				</thead>
+				<% }); %>
+			</table>
+			<% } else { %>
+			<h1>No se encontraron productos.</h1>
+			<% } %>
+			<button class="btn btn-light"><a href="/">Ir al Formulario</a></button>
+		</div>
+	</body>
+</html>

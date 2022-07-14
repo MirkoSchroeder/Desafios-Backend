@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+    if productos.length
+        table.table.mt-3
+            thead
+                tr
+                    th.align-middle(scope='col') #
+                    th.align-middle(scope='col') Nombre
+                    th.align-middle(scope='col') Precio
+                    th.align-middle(scope='col') Imagen
+            thead
+            each product in productos
+                tr
+                    td.align-middle(scope='row')=product.id
+                    td.align-middle=product.title
+                    td.align-middle=product.price+'$'
+                    td.align-middle
+                        img(src=product.thumbnail, alt='imagen del producto', style='width: 100px')
+            
+    else 
+        h1 No se encontraron productos.
+    button.btn.btn-light
+        a(href='/') Ir al Formulario

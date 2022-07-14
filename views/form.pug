@@ -1,0 +1,16 @@
+extends layout 
+
+block content
+    form(action='/productos', method='POST')
+        .my-3
+            label.form-label(for='nombre') Nombre Del Producto
+            input#nombre.form-control(type='text', name='title', required='')
+        .my-3
+            label.form-label(for='precio') Precio Del Producto
+            input#precio.form-control(type='number', name='price', required='')
+        .my-3
+            label.form-label(for='imgUrl') Imagen Del Producto
+            input#imgUrl.form-control(type='url', name='thumbnail', required='')
+        button.btn.btn-primary Enviar
+    button.btn.btn-light
+        a(href='/productos') Ir a Productos
